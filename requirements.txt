@@ -1,2 +1,4 @@
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+Flask==2.0.1
+numpy==1.21.2
+keras==2.6.0
+nltk==3.6.3
