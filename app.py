@@ -1,4 +1,6 @@
 import nltk
+import os
+
 nltk.download('popular')#  Natural Language Toolkit (NLTK) library installed will download and
 # install a collection of popular NLTK data packages, including corpora,
 # models etc
@@ -72,9 +74,11 @@ def about():
 def get_bot_response():
     userText = request.args.get('msg')
     return chatbot_response(userText)
-    
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
 
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5001))
+    app.run(debug=True, host='0.0.0.0', port=port)
 
 
